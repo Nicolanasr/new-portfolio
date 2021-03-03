@@ -29,9 +29,9 @@ SECRET_KEY = 'ab8464d=jk)xcjfv0z8=vg+$a-875z72vx%7gruo_+!&4k5tqd'
 # ALLOWED_HOSTS = []
 
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['nicolas-nasr-portfolio.herokuapp.com']
+ALLOWED_HOSTS = ['nicolas-nasr-portfolio.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
