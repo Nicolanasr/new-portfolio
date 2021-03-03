@@ -28,6 +28,6 @@ def index(request):
 def project(request, project_id):
     project = Project.objects.get(id=project_id)
     ctx = {'project': project}
-    return render(request, 'index/project.html', ctx)
+    return render(request, 'index/Project.html', ctx)
 
 
