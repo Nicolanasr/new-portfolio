@@ -1,0 +1,19 @@
+{% extends "index/base.html" %}
+{% load markdown_extras %}
+{% block title %}Project{% endblock %}
+{% block content %}
+
+<div class="container" style="padding-top: 100px;">
+
+    <a class="btn" href="{{project.github}}" target="_blank"><i class="fab fa-github" style="font-size: 20px;"></i> Github Repo </a>
+    {% if project.description %}
+        {{project.description|markdown|safe}}
+    {% elif project.website %}
+        <p>Sorry there is no description to this project yet. You may contact me or go to the website</p>
+    {% else %}
+        <p>Sorry there is no description to this project yet. This is not a website you can check out the github repo.</p>
+    {% endif %}
+</div>
+
+
+{% endblock %}
