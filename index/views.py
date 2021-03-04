@@ -31,3 +31,7 @@ def project(request, project_id):
     return render(request, 'index/Project.html', ctx)
 
 
+def resume(request):
+    return render(request, 'index/my_resume.html')
+
+
